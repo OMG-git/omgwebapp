@@ -1,48 +1,125 @@
-/* 全体の背景色を設定 */
+/* 全体的なスタイル */
 body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  header nav {
+    float: right;
+  }
+  
+  header nav ul {
+    list-style-type: none;
+    display: flex;
+  }
+  
+  header nav li {
+    margin-right: 20px;
+  }
+  
+  header nav li a {
+    color: #0a0a0a;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  header nav li a:hover {
+    color: #0099ff;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  section {
+    margin-bottom: 20px;
+  }
+  
+  section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  section p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  
+  section a {
+    color: #0099ff;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  section a:hover {
+    color: #0066cc;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* 検索ボックス */
+  #search {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+  
+  /* アプリリスト */
+  #app-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #app-list li {
+    margin-bottom: 10px;
+  }
+  
+  #app-list li a {
+    display: block;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-decoration: none;
+  }
+  
+  #app-list li a:hover {
+    background-color: #f0f0f0;
+  }
+
+/* オートコンプリートリストのスタイル */
+#autocomplete-list {
+  position: absolute;
+  z-index: 999;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+  display: none;
+}
+
+#autocomplete-list li {
+  padding: 5px;
+  cursor: pointer;
+}
+
+#autocomplete-list li:hover {
   background-color: #f0f0f0;
 }
-
-/* タイトルのスタイルを設定 */
-h1 {
-  color: #333;
-  font-family: "Arial", sans-serif;
-  font-size: 36px;
-  text-align: center;
-}
-
-/* 入力欄とボタンのスタイルを設定 */
-input, button {
-  display: inline-block;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  font-size: 20px;
-}
-
-/* 入力欄の色を設定 */
-input {
-  background-color: #fff;
-  width: 200px;
-}
-
-/* ボタンの色とホバー時のエフェクトを設定 */
-button {
-  background-color: #0099ff;
-  color: #fff;
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-
-button:hover {
-  transform: scale(1.1);
-}
-
-/* 結果表示のスタイルを設定 */
-p {
-  color: #333;
-  font-family: "Arial", sans-serif;
-  font-size: 24px;
-  text-align: center;
-  margin-top: 20px;
-}
+  

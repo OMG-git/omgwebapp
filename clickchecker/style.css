@@ -1,0 +1,108 @@
+/* CSSファイルの内容 */
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 0; /* ページの余白をなくす */
+  }
+  
+  #title-bar {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(231, 253, 255);
+    position: fixed; /* ページ上部に固定する */
+    top: 0;
+    left: 0;
+    z-index: 1; /* 他の要素より上に表示する */
+  }
+  
+  #title {
+    font-size: 36px;
+    font-weight: bold;
+    font-family: "Impact", sans-serif; /* フォントをかっこよくする */
+    line-height: 50px; /* タイトルバーの高さに合わせる */
+    margin-left: 10px; /* 左に少し余白をつける */
+  }
+  
+  #content {
+    width: 80%; /* ページの幅の80%を使う */
+    margin: 0 auto; /* 中央に寄せる */
+    padding-top: 60px; /* タイトルバーの下に余白をつける */
+    display: flex; /* 左右に分割する */
+  }
+  
+  #left {
+    width: 50%; /* 左側の幅を50%にする */
+    text-align: center; /* 中央に寄せる */
+  }
+  
+  #right {
+    width: 50%; /* 右側の幅を50%にする */
+    text-align: left; /* 左寄せにする */
+  }
+  
+  #button {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(108, 193, 233);
+    color: white;
+    font-size: 36px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #timer {
+    font-size: 24px;
+    margin: 10px;
+  }
+  
+  #count {
+    font-size: 24px;
+    margin: 10px;
+  }
+  
+  #average {
+    font-size: 24px;
+    margin: 10px;
+  }
+  
+  #history {
+    font-size: 18px;
+    margin: 10px;
+  }
+  
+  table {
+    border-collapse: collapse;
+    margin: 0 auto;
+  }
+  
+  th, td {
+    border: 1px solid black;
+    padding: 5px;
+  }
+/* CSSファイルの内容 */
+/* 背景画像を設定したい要素に対して、background-imageプロパティを使う */
+body {
+    /* 画像のURLをurl()関数で指定する */
+    background-image: url("../images/imagehaikei_.jpg");
+    /* 画像のサイズを調整する */
+    background-size: cover; /* 画像を要素いっぱいに拡大する */
+    /* 画像の繰り返しを制御する */
+    background-repeat: no-repeat; /* 画像を繰り返さない */
+    /* 画像の位置を固定する */
+    background-attachment: fixed; /* 画像をスクロールに追従させない */
+    /* ページの高さを画面の高さに合わせる */
+    height: 100vh; /* 100% of the viewport height */
+  }
+/* 戻るボタンのスタイル */
+#back-button {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 10px;
+  border: 1px solid #07cdff;
+  border-radius: 5px;
+  font-size: 18px;
+  background-color: #07cdff;
+  cursor: pointer;
+}
