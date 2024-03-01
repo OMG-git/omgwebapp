@@ -1,0 +1,53 @@
+<html>
+<head>
+  <!-- ページのアイコンに画像を設定する -->
+  <link rel="icon" href="../images/imageicon.jpg">
+  <!-- CSSファイルを読み込む -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ページ上部の白いバーを作る -->
+  <div id="title-bar">
+    <!-- タイトルを表示する -->
+    <div id="title">10秒間のクリック回数を測定するwebアプリ</div>
+  </div>
+  <!-- ページの内容を表示する -->
+  <div id="content">
+    <!-- 左側の内容を表示する -->
+    <div id="left">
+      <button id="button" onclick="clickButton()">クリック</button>
+      <div id="timer">残り時間: 10秒</div>
+      <div id="count">クリック回数: 0</div>
+      <div id="average">一秒間の平均回数: 0</div>
+      <div id="history">クリック回数の履歴:</div>
+      <table id="table">
+        <tr>
+          <th>日時</th>
+          <th>クリック回数</th>
+          <th>一秒間の平均回数</th>
+        </tr>
+      </table>
+    </div>
+    <!-- 右側の内容を表示する -->
+    <div id="right">
+      <h2>目次</h2>
+      <ul>
+        <li><a href="#intro">紹介</a></li>
+        <li><a href="#app">アプリ</a></li>
+        <li><a href="#contact">連絡先</a></li>
+      </ul>
+      <h2 id="intro">紹介</h2>
+      <p>このwebアプリは、10秒間のクリック回数を測定するものです。画面の中央にあるボタンを連打すると、クリック回数と一秒間の平均回数が表示されます。また、クリック回数の履歴がテーブル形式で表示されます。このwebアプリは、HTML、CSS、Javascriptを使って作成されました。背景は画像生成AIによって作成されました。</p>
+      <h2 id="app">アプリ</h2>
+      <p>アプリの使い方は簡単です。左側のボタンをクリックすると、タイマーがスタートします。10秒間でできるだけ多くの回数をクリックしてください。クリック回数と一秒間の平均回数がリアルタイムで表示されます。10秒が経過すると、タイマーがストップします。クリック回数の履歴が右下のテーブルに追加されます。3秒後に、アプリがリセットされて、再びクリックできるようになります。自分の記録を更新してみましょう。</p>
+      <h2 id="contact">連絡先</h2>
+      <p>このwebアプリに関するご意見やご感想は、以下のメールアドレスにお送りください。</p>
+      <a href="mailto:example@example.com">example@example.com</a>
+    </div>
+  </div>
+  <!-- 戻るボタンを追加 -->
+<button id="back-button">戻る</button>
+  <!-- Javascriptファイルを読み込む -->
+  <script src="script.js"></script>
+</body>
+</html>

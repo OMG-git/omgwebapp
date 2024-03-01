@@ -1,55 +1,54 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
-  <title>素数判定アプリ</title>
-  <!-- style.cssとリンクする -->
+  <title>自作Webアプリまとめ</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/imageicon.jpg">
 </head>
+
 <body>
-  <h1>素数判定アプリ</h1>
-  <p>数値を入力して素数かどうかを判定します。</p>
-  <input type="number" id="input" min="1" value="1">
-  <button id="button">判定</button>
-  <p id="result"></p>
-  <script>
-    // 素数判定関数
-    function isPrime(n) {
-      // n が 2 以下の場合は素数ではない
-      if (n <= 2) {
-        return false;
-      }
+  <header>
+    <h1>自作Webアプリまとめ(ver0.1)</h1>
+    <nav>
+      <ul>
+        <li><a href="#">ホーム</a></li>
+        <li><a href="#">アプリ一覧</a></li>
+        <li><a href="#">検索</a></li>
+      </ul>
+    </nav>
+  </header>
 
-      // n の平方根までの自然数で割り切れるかどうかを調べる
-      let sqrt = Math.sqrt(n);
-      for (let i = 2; i <= sqrt; i++) {
-        // 割り切れる場合は素数ではない
-        if (n % i == 0) {
-          return false;
-        }
-      }
+  <main>
+    <section id="intro">
+      <h2>自作Webアプリまとめへようこそ</h2>
+      <p>このサイトでは、私が作成したさまざまなWebアプリを紹介しています。クリック回数の測定アプリから、素数判定アプリまで、さまざまなアプリがあります。ぜひ、お気に入りのアプリを見つけてください。</p>
+    </section>
 
-      // 割り切れない場合は素数である
-      return true;
-    }
+    <section id="apps">
+      <h2>アプリ一覧</h2>
+      <p> 検索機能を使って、アプリを検索できます。検索ボックスにキーワードを入力すると、そのキーワードを含むアプリが表示されます。</p>
 
-    // 入力欄とボタンと結果表示の要素を取得
-    let input = document.getElementById("input");
-    let button = document.getElementById("button");
-    let result = document.getElementById("result");
+<input type="text" id="search" placeholder="アプリを検索">
+<ul id="app-list">
+  <li>
+    <a href="clickchecker/clickchecker.html">10秒間のクリック回数を測定するアプリ</a>
+  </li>
+  <li>
+    <a href="sosuapp/sosuapp.html">素数判定アプリ</a>
+  </li>
+</ul>
+<!-- 予測機能のためのオートコンプリートリストを追加 -->
+<div id="autocomplete-list" style="display: none;"></div>
+    </section>
+  </main>
 
-    // ボタンがクリックされたときの処理
-    button.addEventListener("click", function() {
-      // 入力された数値を取得
-      let n = parseInt(input.value);
-
-      // 素数判定関数に渡して結果を表示
-      if (isPrime(n)) {
-        result.textContent = n + "は素数です。";
-      } else {
-        result.textContent = n + "は素数ではありません。";
-      }
-    });
-  </script>
+  <footer>
+    Copyright © 2023 自作Webアプリまとめ
+  </footer>
+    <!-- Javascriptファイルを読み込む -->
+    <script src="script.js"></script>
 </body>
+
 </html>
