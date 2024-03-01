@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>素数判定アプリ</title>
+</head>
+<body>
+  <h1>素数判定アプリ</h1>
+  <p>数値を入力して素数かどうかを判定します。</p>
+  <input type="number" id="input" min="1" value="1">
+  <button id="button">判定</button>
+  <p id="result"></p>
+  <script>
+    // 素数判定関数
+    function isPrime(n) {
+      // n が 2 以下の場合は素数ではない
+      if (n <= 2) {
+        return false;
+      }
+
+      // n の平方根までの自然数で割り切れるかどうかを調べる
+      let sqrt = Math.sqrt(n);
+      for (let i = 2; i <= sqrt; i++) {
+        // 割り切れる場合は素数ではない
+        if (n % i == 0) {
+          return false;
+        }
+      }
+
+      // 割り切れない場合は素数である
+      return true;
+    }
+
+    // 入力欄とボタンと結果表示の要素を取得
+    let input = document.getElementById("input");
+    let button = document.getElementById("button");
+    let result = document.getElementById("result");
+
+    // ボタンがクリックされたときの処理
+    button.addEventListener("click", function() {
+      // 入力された数値を取得
+      let n = parseInt(input.value);
+
+      // 素数判定関数に渡して結果を表示
+      if (isPrime(n)) {
+        result.textContent = n + "は素数です。";
+      } else {
+        result.textContent = n + "は素数ではありません。";
+      }
+    });
+  </script>
+</body>
+</html>
